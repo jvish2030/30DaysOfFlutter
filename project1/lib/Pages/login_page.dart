@@ -8,10 +8,8 @@ class LoginPage extends StatelessWidget {
     return Material(
         color: Colors.white,
         child: Column(
-          children:[
-            Image.asset(
-              'assets/images/enter.png',
-            fit: BoxFit.cover),
+          children: [
+            Image.asset('assets/images/enter.png', fit: BoxFit.cover),
             SizedBox(height: 20.0),
             Padding(
               padding:
