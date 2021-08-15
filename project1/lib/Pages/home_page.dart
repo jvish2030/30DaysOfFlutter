@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     int days = 30;
     return Center(
       child: Scaffold(
-        appBar: AppBar(
+        appBar: AppBar( 
           title: Text("Catalog App"),
         ),
         body: Center(
