@@ -8,12 +8,13 @@ class HomePage extends StatelessWidget {
     int days = 30;
     return Center(
       child: Scaffold(
-        appBar: AppBar( 
+        appBar: AppBar(
           title: Text("Catalog App"),
         ),
         body: Center(
           child: Container(
-            child: Text("Welcome jatinVishwakarma to $days of course!!"),
+            alignment: Alignment.center,
+            child: Text("Welcome jatinVishwakarma to $days days of course!!"),
           ),
         ),
         drawer: Drawer(),
