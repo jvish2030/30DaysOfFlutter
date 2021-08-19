@@ -38,7 +38,6 @@ class CatalogItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return VxBox(
-      
         child: Row(
       children: [
         Hero(
@@ -51,6 +50,7 @@ class CatalogItem extends StatelessWidget {
           children: [
             catalog.name.text.lg.bold.make(),
             catalog.desc.text.textStyle(context.captionStyle).make(),
+            10.heightBox,
             ButtonBar(
                 buttonPadding: EdgeInsets.zero,
                 alignment: MainAxisAlignment.spaceBetween,
