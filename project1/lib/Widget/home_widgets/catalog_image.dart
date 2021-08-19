@@ -8,6 +8,12 @@ class CatalogImage extends StatelessWidget {
   const CatalogImage({Key? key, required this.image}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Image.network(image).box.p12.make().w32(context);
+    return Image.network(image)
+        .box
+        .rounded
+        .p8
+        .color(context.canvasColor)
+        .make()
+        .w40(context);
   }
 }

@@ -9,7 +9,7 @@ class HomeDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: Color(0xfff5f3f5),
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -24,8 +24,8 @@ class HomeDetailsPage extends StatelessWidget {
                           backgroundColor:
                               MaterialStateProperty.all(Colors.black87),
                           shape: MaterialStateProperty.all(StadiumBorder())),
-                      child: "Buy".text.make())
-                  .wh(100, 50)
+                      child: "Add to cart".text.make())
+                  .wh(120, 50)
             ]).p32(),
       ),
       body: SafeArea(
@@ -33,9 +33,9 @@ class HomeDetailsPage extends StatelessWidget {
           child: Column(
             children: [
               Hero(
-                tag: Key(catalog.id.toString()),
-                child: Image.network(catalog.image),
-              ).h32(context),
+                      tag: Key(catalog.id.toString()),
+                      child: Image.network(catalog.image))
+                  .h32(context),
               Expanded(
                   child: VxArc(
                       height: 30.0,
@@ -50,6 +50,11 @@ class HomeDetailsPage extends StatelessWidget {
                             catalog.desc.text.xl
                                 .textStyle(context.captionStyle)
                                 .make(),
+                            "Labore kasd aliquyam ut dolor justo. Ut duo est sit takimata ea dolore, gubergren et duo stet consetetur vero gubergren justo et at. Consetetur ipsum rebum dolor accusam et eirmod et. Stet lorem elitr labore et lorem duo ipsum vero sed. Ipsum dolor diam stet kasd justo. Ipsum sanctus lorem."
+                                .text
+                                .textStyle(context.captionStyle)
+                                .make()
+                                .p16()
                           ],
                         ).py64(),
                       )))
