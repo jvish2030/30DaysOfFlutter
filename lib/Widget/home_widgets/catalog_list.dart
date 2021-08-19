@@ -35,7 +35,7 @@ class CatalogItem extends StatelessWidget {
     Key? key,
     required this.catalog,
   }) : super(key: key);
-
+// Jainesh
   @override
   Widget build(BuildContext context) {
     return VxBox(
