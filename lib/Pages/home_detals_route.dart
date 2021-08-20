@@ -10,9 +10,9 @@ class HomeDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.transparent),
-      backgroundColor: Color(0xfff5f3f5),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
             buttonPadding: EdgeInsets.zero,
             alignment: MainAxisAlignment.spaceBetween,
@@ -21,8 +21,8 @@ class HomeDetailsPage extends StatelessWidget {
               ElevatedButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.black87),
+                          backgroundColor: MaterialStateProperty.all(
+                              context.theme.buttonColor),
                           shape: MaterialStateProperty.all(StadiumBorder())),
                       child: "Add to cart".text.make())
                   .wh(120, 50)
@@ -43,10 +43,13 @@ class HomeDetailsPage extends StatelessWidget {
                       edge: VxEdge.TOP,
                       child: Container(
                         width: context.screenWidth,
-                        color: Colors.white,
+                        color: context.cardColor,
                         child: Column(
                           children: [
-                            catalog.name.text.xl4.bold.make(),
+                            catalog.name.text.xl4
+                                .color(context.accentColor)
+                                .bold
+                                .make(),
                             catalog.desc.text.xl.make(),
                             "Labore kasd aliquyam ut dolor justo. Ut duo est sit takimata ea dolore, gubergren et duo stet consetetur vero gubergren justo et at. Consetetur ipsum rebum dolor accusam et eirmod et. Stet lorem elitr labore et lorem duo ipsum vero sed. Ipsum dolor diam stet kasd justo. Ipsum sanctus lorem."
                                 .text

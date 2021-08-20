@@ -4,12 +4,12 @@ import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
-      primarySwatch: Colors.red,
+      primarySwatch: Colors.indigo,
       fontFamily: GoogleFonts.poppins().fontFamily,
-      cardColor: Colors.white,
-      canvasColor: Color(0xfff5f3f5),
+      cardColor: Colors.white60,
+      canvasColor: Colors.white,
       accentColor: darkColor,
-      buttonColor: darkColor,
+      buttonColor: lightBlue,
       appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -26,7 +26,7 @@ class MyTheme {
       appBarTheme: AppBarTheme(
           color: Colors.black,
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.white),
           textTheme: Theme.of(context).textTheme));
 
   static Color darkColor = Vx.gray900;
