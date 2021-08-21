@@ -89,7 +89,7 @@ class CatalogModel {
   CatalogModel._internal();
 
   factory CatalogModel() => catModel;
-  
+
   static List<Item> items = [];
 
   Item getById(int id) =>
