@@ -3,13 +3,15 @@ import 'package:project1/Pages/home_page.dart';
 import 'package:project1/Pages/Login_page.dart';
 import 'package:project1/Utils/MyRoutes.dart';
 import 'package:project1/Widget/themes.dart';
+import 'package:project1/core/store.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import 'Pages/cart_page.dart';
 
 //jainesh
 // @dart=2.9
 void main() {
-  runApp(MyApp());
+  runApp(VxState(store: MyStore(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
