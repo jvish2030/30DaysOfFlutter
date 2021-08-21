@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project1/Models/cart.dart';
 import 'package:project1/Models/catalog.dart';
 import 'package:project1/Pages/home_detals_route.dart';
-import 'package:project1/Widget/themes.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
-
 import 'add_to_cart.dart';
 import 'catalog_image.dart';
 
