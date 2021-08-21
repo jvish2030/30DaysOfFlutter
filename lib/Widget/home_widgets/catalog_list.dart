@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Models/cart.dart';
 import 'package:project1/Models/catalog.dart';
 import 'package:project1/Pages/home_detals_route.dart';
 import 'package:project1/Widget/themes.dart';
@@ -56,7 +57,10 @@ class CatalogItem extends StatelessWidget {
                 alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
-                  AddToCart()
+                  _AddToCart(
+                    catalog: catalog,
+                    key: null,
+                  )
                 ]),
           ],
         ))
@@ -65,24 +69,37 @@ class CatalogItem extends StatelessWidget {
   }
 }
 
-class AddToCart extends StatefulWidget {
-  const AddToCart({
+class _AddToCart extends StatefulWidget {
+  final Item catalog;
+  const _AddToCart({
     Key? key,
+    required this.catalog,
   }) : super(key: key);
 
   @override
-  _AddToCartState createState() => _AddToCartState();
+  __AddToCartState createState() => __AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart> {
+class __AddToCartState extends State<_AddToCart> {
+  bool isAdded = false;
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: () {},
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(
-                context.theme.buttonColor),
-            shape: MaterialStateProperty.all(StadiumBorder())),
-        child: "Add to cart".text.base.medium.make().w20(context));
+      onPressed: () {
+        isAdded = isAdded.toggle();
+        final _catalog = CatalogModel();
+        final _cart = CartModel();
+        _cart.catalog = _catalog;
+        _cart.add(widget.catalog);
+        setState(() {});
+      },
+      style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
+          shape: MaterialStateProperty.all(
+            StadiumBorder(),
+          )),
+      child: isAdded ? Icon(Icons.done) : "Add to cart".text.make(),
+    );
   }
 }
