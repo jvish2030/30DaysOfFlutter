@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //Theme automatically switched by system theme
       // themeMode: ThemeMode.system,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system=
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       // darkTheme: ThemeData(brightness: Brightness.dark),
